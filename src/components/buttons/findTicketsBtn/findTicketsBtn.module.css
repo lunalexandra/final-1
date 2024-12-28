@@ -1,0 +1,20 @@
+.find-tickets-btn {
+    width: 323px;
+    height: 60px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #292929;
+    background-color: #FFA800;
+    border-radius: 5px;
+    align-self: flex-end;
+}
+
+.find-tickets-btn:hover {
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.find-tickets-btn:active {
+    background-color: #fff;
+    border: 1px solid #FFA800;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}

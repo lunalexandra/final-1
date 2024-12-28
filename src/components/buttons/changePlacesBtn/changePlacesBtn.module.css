@@ -1,0 +1,13 @@
+.change-btn {
+    width: 24px;
+    background-color: transparent;
+    border: none;
+}
+
+.change-btn:hover {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(68%) saturate(367%) hue-rotate(1deg) brightness(101%) contrast(105%);
+}
+
+.change-btn:active {
+    filter: brightness(0) invert(100%);
+}

@@ -1,0 +1,176 @@
+.container {
+  display: flex;
+  width: 100%;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px 0px #0000004d;
+}
+
+.container:hover {
+  border: 1px solid #ffa800;
+}
+
+.train {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  padding: 4px;
+  flex-direction: column;
+  background-color: #e4e0e9;
+}
+
+.icon {
+  width: 86px;
+  height: 86px;
+  margin-top: 58px;
+  margin-left: 15%;
+}
+
+.number {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3e3c41;
+  margin-left: 10%;
+  margin-top: 17px;
+}
+
+.cities {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 400;
+  color: #292929;
+  margin: 15px 10%;
+}
+
+.initial {
+  color: #928f94;
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 50%;
+  padding: 54px 36px 40px 39px;
+}
+
+.departure-box,
+.arrival-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.departure-box__from,
+.departure-box__to,
+.arrival-box__from,
+.arrival-box__to {
+  width: 30%;
+}
+
+.direction {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.time {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+.arrow {
+  width: 30px;
+}
+
+.city {
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 400;
+  color: #292929;
+}
+
+.station {
+  color: #928f94;
+}
+
+.duration {
+  font-size: 18px;
+  font-weight: 400;
+  color: #c4c4c4;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-left: 1px solid #e5e5e5;
+  padding: 40px 20px;
+}
+
+.type-box {
+  display: flex;
+}
+
+.type {
+  display: flex;
+  align-items: end;
+  width: 90px;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3e3c41;
+}
+
+.quantity {
+  display: flex;
+  justify-content: center;
+  width: 20px;
+  align-items: end;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffa800;
+}
+
+.price {
+  display: flex;
+  justify-content: end;
+  font-size: 16px;
+  font-weight: 400;
+  color: #928f94;
+  flex-grow: 1;
+  align-items: end;
+  gap: 6px;
+}
+
+.amount {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2d2b2f;
+}
+
+.ruble {
+  font-size: 24px;
+  font-weight: 400;
+  color: #928f94;
+}
+
+.tripple {
+  width: 92px;
+  height: 20px;
+  align-self: flex-end;
+}
+
+.button {
+  width: 228px;
+  height: 39px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 2px;
+  background-color: #FFA800;
+  border: none;
+  border-radius: 5px;
+  align-self: flex-end;
+}

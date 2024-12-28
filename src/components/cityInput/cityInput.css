@@ -1,0 +1,39 @@
+.city-input-container {
+  position: relative;
+}
+
+.input-from,
+.input-to {
+  width: 322px;
+  text-transform: capitalize;
+  padding: 20px 73px 20px 20px;
+  font-size: 18px;
+  font-weight: 400;
+  background: url("/src/assets/images/geolocation.png") no-repeat 280px / 7%
+      auto,
+    #ffffff;
+}
+
+.suggestions-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  background-color: #f5f4f6;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 3px;
+  padding: 14px 22px 14px 28px;
+  align-items: start;
+  z-index: 20;
+}
+
+.suggestion-item {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  color: #292929;
+  text-transform: uppercase;
+}

@@ -1,0 +1,59 @@
+.toggle-switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 72px;
+    height: 19px;
+    margin: 10px;
+  }
+  
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .toggle-switch input:checked + .toggle-switch__slider {
+    background-color: #FCDC9D; /* Цвет для включенного состояния */
+  }
+
+  .toggle-switch .toggle-switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#FFFFFF;
+    transition: 0.4s;
+    border-radius: 10px; /* Круглая форма */
+  }
+  
+  .toggle-switch .toggle-switch__slider:before {
+    position: absolute;
+    content: "";
+    height: 28px;
+    width: 28px;
+    border-radius: 50%; /* Круглая кнопка */
+    left: 0; /* Отступ слева */
+    top: -4px; /* Отступ снизу */
+    background-color: #C4C4C4;
+    transition: 0.4s;
+  }
+  
+  /* Стили для перемещения кнопки в правое положение */
+  .toggle-switch input:checked + .toggle-switch__slider:before {
+    background-color: #FFA800;
+    transform: translateX(46px); /* Перемещаем кнопку в правую сторону */
+  }
+  
+  .toggle-switch__title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+  }

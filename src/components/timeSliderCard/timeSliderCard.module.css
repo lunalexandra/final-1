@@ -1,0 +1,60 @@
+.expandable {
+  width: 100%;
+  border-top: 1px solid #fff;
+  padding: 20px 0 40px;
+}
+
+.expandable__headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.arrow {
+  width: 32px;
+  height: 26px;
+  margin-left: 10px;
+}
+
+.title {
+  color: #fff;
+  flex-grow: 1;
+  font-weight: 700;
+  margin-left: 12px;
+}
+
+.button {
+  width: 20px;
+  height: 20px;
+  line-height: 19px;
+  font-size: 18px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.button:active {
+  color: #c4c4c4;
+  border: 2px solid #c4c4c4;
+}
+
+.button:hover {
+  color: #fcdc9d;
+  border: 2px solid #fcdc9d;
+}
+
+.departure-container {
+  margin-bottom: 66px;
+}
+
+.departure-time,
+.arrival-time {
+  color: #fff;
+  margin: 22px 0 15px;
+}
+
+.arrival-time {
+  text-align: right;
+}

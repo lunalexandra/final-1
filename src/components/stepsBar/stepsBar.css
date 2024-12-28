@@ -1,0 +1,82 @@
+.steps-bar {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.step-bar__step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 30%;
+  background-color: transparent;
+  height: 98px;
+  padding-left: 4%;
+  color: white;
+  background: #3E3C41;
+
+}
+
+.step-2,
+.step-3 {
+ 
+}
+.step-bar__step.--active {
+  background-color: #FFA800;
+  ;
+ 
+}
+
+.step-bar__step:last-child {
+  margin-right: 0;
+}
+
+.step-bar__circle {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #FFFFFF;
+    border-radius: 50%;
+    font-size: 36px;
+    margin-right: 21px;
+}
+
+
+.arrow {
+  position: absolute;
+  right: -28px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 98px;
+  border-style: solid;
+  border-width: 49px 0 49px 30px;
+  border-color: transparent transparent transparent #3E3C41;
+  z-index: 10;
+}
+
+.step-bar__step.--active .arrow {
+  border-left-color: #FFA800;
+}
+
+.arrow-border {
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  border-style: solid;
+  border-width: 49px 0 49px 30px;
+  border-color: transparent transparent transparent #e0e0e0;
+  z-index: 2;
+}
+
+
+.step-bar__step.--active .arrow-border {
+    border-left-color: #FFA800;
+  }

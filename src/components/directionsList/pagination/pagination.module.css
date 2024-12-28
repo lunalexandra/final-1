@@ -1,0 +1,35 @@
+.pagination {
+    display: flex;
+    gap: 35px;
+    align-self: flex-end;
+    margin-top: 60px;
+}
+.page-button {
+    width: 85px;
+    height: 75px;
+    font-size: 30px;
+    font-weight: 700;
+    border: 2px solid #C4C4C4;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #928F94;
+}
+
+.arrows {
+    margin: 22px ;
+}
+
+.back, .ahead {
+    width: 85px;
+    height: 75px;
+    font-size: 30px;
+    font-weight: 700;
+    border: 2px solid #C4C4C4;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.page-button:hover, .back:hover, .ahead:hover {
+    border-color: #FFA800;
+    color: #FFA800;
+}

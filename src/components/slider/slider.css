@@ -1,0 +1,19 @@
+.slider-container {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.thumb-value {
+    position: absolute;
+    bottom: -30px; /* Отступ от ползунка */
+    transform: translateX(-50%);
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.min-max {
+    display: flex;
+    justify-content: space-between;
+}

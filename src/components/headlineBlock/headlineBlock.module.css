@@ -1,0 +1,20 @@
+.headline-block {
+    display: flex;
+}
+
+.headline-block__title {
+    display: flex;
+    width: 50%;
+    justify-content: start;
+    align-items: flex-end;
+    padding-left: 13%;
+    padding-bottom: 240px;
+}
+
+.headline-block__title-bold {
+    font-weight: 700;
+}
+
+.search-block__wrp {
+    padding: 253px 0 0 0;
+}

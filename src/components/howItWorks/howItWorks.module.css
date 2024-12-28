@@ -1,0 +1,61 @@
+.how-it-works {
+    background-image: url("../../assets/images/how.png");
+    
+}
+
+.how-it-works__headline {
+    display: flex;
+    align-items: center;
+    padding: 69px 60px 100px 13%;
+    justify-content: space-between;
+}
+
+.how-it-works__title {
+    color: #fff;
+}
+
+.how-it-works__button {
+    width: 325px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+.how-it-works__button:hover {
+    background: #FFCA62;
+    color: #2D2B2F;
+    border: none;
+
+}
+
+.how-it-works__button:active {
+    background: #FFFFFF;
+    color: #2D2B2F;
+  }
+
+.how-it-works__advantages {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.how-it-works__advantage-box {
+    text-align: center;
+}
+
+.how-it-works__advantage-1, .how-it-works__advantage-2, .how-it-works__advantage-3 {
+    width: 162px;
+}
+
+.how-it-works__text {
+    text-align: center;
+    width: 260px;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 34px 0 90px;
+    color: #fff;
+}

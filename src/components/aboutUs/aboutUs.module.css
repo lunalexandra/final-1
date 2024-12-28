@@ -1,0 +1,24 @@
+.about-us {
+    border-top: 8px solid #FFA800;
+    padding: 144px 13%;
+}
+
+.about-us__title {
+  margin-bottom: 30px;
+}
+
+.about-us__text {
+    font-size: 24px;
+    font-weight: 400;
+    padding-left: 19px;
+    border-left: 9px solid #FFA800;
+    color: #292929;
+}
+
+.about-us__text-bold {
+    font-weight: 700;
+}
+
+.about-us__text-normal {
+    margin-bottom: 30px;
+}

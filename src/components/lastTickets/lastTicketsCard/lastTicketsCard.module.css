@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 360px;
+  height: 161px;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px 0px #3e3c4140;
+  background-color: #fff;
+  padding: 18px;
+}
+
+.cities {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 400;
+  color: #292929;
+  text-transform: capitalize;
+}
+
+.stations {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  color: #928f94;
+}
+
+.icons {
+  width: 92px;
+  height: 20px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 400;
+  color: #928f94;
+}
+
+.amount {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffa800;
+}
+
+.ruble {
+  font-size: 36px;
+  font-weight: 400;
+  color: #928f94;
+}
+
+.price-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-grow: 1;
+}

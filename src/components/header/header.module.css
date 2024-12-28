@@ -1,0 +1,33 @@
+.header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0 13% 0 13%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.header__logo-link {
+}
+
+.header__menu {
+  display: flex;
+  gap: 83px;
+  align-items: center;
+  height: 94px;
+  padding: 0 13% 0 13%;
+  list-style: none;
+  background-color: #292929;
+}
+
+.header__menu-item {
+  font-weight: 300;
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+}

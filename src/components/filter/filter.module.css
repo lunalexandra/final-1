@@ -1,0 +1,76 @@
+.filter__container {
+    background-color: #3E3C41;
+    width: 364px;
+    min-height: 20px;
+}
+
+.filter__dates {
+    padding: 20px;
+}
+
+.filter__dates-label {
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.filter__wagons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 20px;
+    border-top: 1px solid #fff;
+    margin: 0;
+}
+
+.wagons__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.wagons__img {
+    width: 30px;
+    margin: 0 34px;
+}
+
+.wagons__icon {
+
+}
+
+.slider-box {
+    width: 100%;
+}
+
+.filter__cost {
+    border-top: 1px solid #fff;
+    padding: 40px 30px 60px;
+}
+
+.filter__titles {
+    color: #fff;
+    font-weight: 400;
+}
+
+.filter__from-to-titles {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 4px 0;
+    color: #fff;
+    font-weight: 400;
+}
+
+.last-tickets {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    width: 360px;
+}
+
+.last-tickets__titles {
+    font-weight: 500;
+    margin: 94px 0 26px;
+}
