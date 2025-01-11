@@ -24,7 +24,7 @@ const sortSlice = createSlice({
     },
     setOffset: (state, action: PayloadAction<number>) => {
         state.offset = action.payload;
-        //console.log(`Оффсет ${state.offset}`);
+        console.log(`Оффсет в срезе ${state.offset}`);
     },
   },
 });

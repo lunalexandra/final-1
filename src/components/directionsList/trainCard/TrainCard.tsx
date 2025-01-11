@@ -1,4 +1,4 @@
-import { convertSecondsToTime } from "./convertSecondsToTime"; 
+import { convertSecondsToTime } from "../convertSecondsToTime"; 
 import arrowRight from "../../../assets/images/trains/right.png";
 import arrowLeft from "../../../assets/images/trains/left.png";
 import trainIcon from "../../../assets/images/trains/train.png";
@@ -43,6 +43,7 @@ interface TrainCardProps {
   arrivalStationTo?: string;
   seats_info: SeatsInfo;
   price_info: PriceInfo;
+  onSelect: () => void;
 }
 
 export const TrainCard: React.FC<TrainCardProps> = ({
@@ -62,7 +63,8 @@ export const TrainCard: React.FC<TrainCardProps> = ({
   arrivalToTime, 
   arrivalStationTo,
   seats_info,
-  price_info
+  price_info,
+  onSelect
 }) => {
   return (
     <article className={classes.container}>
@@ -147,7 +149,7 @@ export const TrainCard: React.FC<TrainCardProps> = ({
         <div className={classes.tripple}>
           <img src={icons} alt="" />
         </div>
-        <button type="button" className={classes.button}>
+        <button type="button" className={classes.button} onClick={onSelect} >
           Выбрать места
         </button>
       </div>

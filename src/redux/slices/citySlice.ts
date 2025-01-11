@@ -43,7 +43,7 @@ const citiesSlice = createSliceWithThunk({
     setFromCity: create.reducer(
       (state, action: PayloadAction<City>) => {
         state.fromCity = action.payload;
-        //console.log(`Срез: ${state.fromCity._id} ${state.fromCity.name}`)
+        console.log(`Срез: ${state.fromCity._id} ${state.fromCity.name}`)
       }
     ),
     setToCity: create.reducer((state, action: PayloadAction<City>) => {

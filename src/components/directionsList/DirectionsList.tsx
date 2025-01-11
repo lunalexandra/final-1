@@ -1,19 +1,38 @@
-import React, { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks";
+import { Filter } from "../filter";
 import {
   fetchDirections,
   clearDirections,
 } from "../../redux/slices/directionsSlice";
 import { RootState } from "../../redux/store";
+import { LoadingPage } from "../loadingPage/LoadingPage";
 import { TrainInfo } from "../../types/TrainInfo";
+import { SeatsPage } from "../seatsPage/SeatsPage";
 import { TrainCard } from "./trainCard/TrainCard";
-import  {SortBlock}  from "./sortBlock/SortBlock";
+import { SortBlock } from "./sortBlock/SortBlock";
 import { Pagination } from "./pagination/Pagination";
 import classes from "./directionsList.module.css";
 
-
 const DirectionsList: React.FC = () => {
   const dispatch = useAppDispatch();
+
+  const [currentView, setCurrentView] = useState<"directions" | "seats">(
+    "directions"
+  );
+  const [selectedDirection, setSelectedDirection] = useState<TrainInfo | null>(
+    null
+  );
+
+  const showSeats = (direction: TrainInfo) => {
+    setSelectedDirection(direction);
+    setCurrentView("seats");
+  };
+
+  const goBackToDirections = () => {
+    setCurrentView("directions");
+    setSelectedDirection(null);
+  };
 
   const { directions, total_count, loading, error } = useAppSelector(
     (state: RootState) => state.directions
@@ -45,9 +64,9 @@ const DirectionsList: React.FC = () => {
     end_arrival_hour_to,
   } = useAppSelector((state: RootState) => state.filters);
 
-  const { sort, limit, offset } = useAppSelector((state: RootState) => state.sort)
-
-  const [cardArray, setCardArray] = useState<TrainInfo[]>([]);
+  const { sort, limit, offset } = useAppSelector(
+    (state: RootState) => state.sort
+  );
 
   useEffect(() => {
     if (fromCity && toCity) {
@@ -56,7 +75,7 @@ const DirectionsList: React.FC = () => {
         `Названия городов в направлениях: ${fromCity._id}, ${toCity._id}`
       );
     } else {
-      //console.error("Города не выбраны.");
+      console.error("Города не выбраны.");
     }
 
     return () => {
@@ -86,59 +105,86 @@ const DirectionsList: React.FC = () => {
     end_arrival_hour_to,
     sort,
     limit,
-    offset
-  ]); 
+    offset,
+  ]);
 
-  useEffect(() => {
-    if (directions.length > 0) {
-      setCardArray(directions);
-    }
-  }, [directions]);
-
-  if (loading) {
-    return <div>Загрузка...</div>;
-  }
+  if (loading && fromCity._id && toCity._id) {
+    return <LoadingPage />;
+}
 
   if (error) {
-    <div>Произошла ошибка при загрузке направлений. Пожалуйста, попробуйте позже.</div>
     console.log(error);
+    return (
+      <>
+        <aside>
+          <Filter />
+        </aside>
+        <main>
+          Произошла ошибка при загрузке направлений. Пожалуйста, попробуйте
+          позже.
+        </main>
+      </>
+    );
   }
 
   return (
-    <div className={classes["container"]}>
-      <SortBlock />
-      {total_count === 0 ? (
-        <></>
-      ) : (
-        <div className={classes.list}>
-          {cardArray.map((direction: TrainInfo, index) => (
-            <TrainCard
-              key={`${fromCity.name}-${toCity.name}-${index}`}
-              trainNumber={direction.departure.train.name}
-              departureCityFrom={direction.departure.from.city.name}
-              departureCityTo={direction.departure.to.city.name}
-              departureFromTime={direction.departure.from.datetime}
-              departureStationFrom={
-                direction.departure.from.railway_station_name
-              }
-              departureDuration={direction.departure.duration}
-              departureToTime={direction.departure.to.datetime}
-              departureStationTo={direction.departure.to.railway_station_name}
-              arrivalCityFrom={direction.arrival?.from.city.name}
-              arrivalCityTo={direction.arrival?.to.city.name}
-              arrivalFromTime={direction.arrival?.from.datetime}
-              arrivalStationFrom={direction.arrival?.from.railway_station_name}
-              arrivalDuration={direction.arrival?.duration}
-              arrivalToTime={direction.arrival?.to.datetime}
-              arrivalStationTo={direction.arrival?.to.railway_station_name}
-              seats_info={direction.available_seats_info}
-              price_info={direction.departure.price_info}
+    <>
+      <aside>
+        <Filter />
+      </aside>
+      <main className={classes["container"]}>
+        {currentView === "directions" ? (
+          <>
+            <SortBlock />
+            {total_count === 0 ? null : (
+              <div className={classes.list}>
+                {directions.map((direction: TrainInfo) => (
+                  <TrainCard
+                    key={`${direction.departure.from.datetime}`}
+                    trainNumber={direction.departure.train.name}
+                    departureCityFrom={direction.departure.from.city.name}
+                    departureCityTo={direction.departure.to.city.name}
+                    departureFromTime={direction.departure.from.datetime}
+                    departureStationFrom={
+                      direction.departure.from.railway_station_name
+                    }
+                    departureDuration={direction.departure.duration}
+                    departureToTime={direction.departure.to.datetime}
+                    departureStationTo={
+                      direction.departure.to.railway_station_name
+                    }
+                    arrivalCityFrom={direction.arrival?.from.city.name}
+                    arrivalCityTo={direction.arrival?.to.city.name}
+                    arrivalFromTime={direction.arrival?.from.datetime}
+                    arrivalStationFrom={
+                      direction.arrival?.from.railway_station_name
+                    }
+                    arrivalDuration={direction.arrival?.duration}
+                    arrivalToTime={direction.arrival?.to.datetime}
+                    arrivalStationTo={
+                      direction.arrival?.to.railway_station_name
+                    }
+                    seats_info={direction.available_seats_info}
+                    price_info={direction.departure.price_info}
+                    onSelect={() => showSeats(direction)} // Передаем функцию для выбора направления
+                  />
+                ))}
+              </div>
+            )}
+            <Pagination />
+          </>
+        ) : (
+          <>
+            <main>
+                <SeatsPage
+              direction={selectedDirection}
+              onBackToDirections={goBackToDirections} // Передаем функцию для возврата к списку направлений
             />
-          ))}
-        </div>
-      )}
-      <Pagination/>
-    </div>
+            </main>
+          </>
+        )}
+      </main>
+    </>
   );
 };
 

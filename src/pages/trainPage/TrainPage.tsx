@@ -3,7 +3,6 @@ import {
   SearchBlock,
   Footer,
   StepsBar,
-  Filter,
 } from "../../components";
 import DirectionsList from "../../components/directionsList/DirectionsList";
 import banner2 from "../../assets/images/second-banner.png";
@@ -31,12 +30,10 @@ export const TrainPage = () => {
       />
       <StepsBar currentStep={1} />
       <div className="main-container">
-        <aside>
+        {/* <aside>
           <Filter />
-        </aside>
-        <main>
+        </aside> */}
           <DirectionsList/>
-        </main>
       </div>
       <Footer />
     </>
