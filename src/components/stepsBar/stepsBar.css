@@ -72,11 +72,11 @@
   height: 100px;
   border-style: solid;
   border-width: 49px 0 49px 30px;
-  border-color: transparent transparent transparent #e0e0e0;
+  border-color: transparent transparent transparent #E5E5E5;
   z-index: 2;
 }
 
 
 .step-bar__step.--active .arrow-border {
-    border-left-color: #FFA800;
+    border-left-color: #E5E5E5;
   }

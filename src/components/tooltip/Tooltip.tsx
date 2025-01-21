@@ -1,15 +1,17 @@
 import React, { useRef } from "react";
 
 interface TooltipProps {
-  content?: React.ReactNode; 
+  content?: React.ReactNode;
   children?: React.ReactNode; // Элемент, над которым отображается тултип
-  visible?: boolean; // Управление видимостью тултипа извне
+  visible?: boolean;
+  className?: string; // Управление видимостью тултипа извне
 }
 
 const Tooltip: React.FC<TooltipProps> = ({
   content,
   children,
   visible = false,
+  className = "",
 }) => {
   const tooltipRef = useRef<HTMLDivElement | null>(null);
 
@@ -34,6 +36,7 @@ const Tooltip: React.FC<TooltipProps> = ({
             fontSize: "18px",
             borderRadius: "10px",
           }}
+          className={className}
           role="tooltip"
         >
           {content}

@@ -1,0 +1,113 @@
+.numbers {
+  display: flex;
+  justify-content: space-between;
+  min-height: 37px;
+  padding-right: 13px;
+  padding-left: 34px;
+  background: #ffa80070;
+  line-height: 37px;
+}
+
+.head-tail {
+  min-width: 300px;
+  padding: 0 10px;
+  word-break: break-word;
+}
+
+.numbers span {
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.carriage-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  background: #ffa80070;
+}
+
+.carriages-box {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carriage-number span {
+  padding-left: 12px;
+}
+
+.numeric {
+  font-size: 72px;
+  font-weight: 700;
+}
+
+.word-carriage {
+  text-align: center;
+}
+.selectedCoach {
+  margin-right: 4px;
+  margin-left: 4px;
+  color: #fff;
+}
+
+.empty {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  padding-top: 30px;
+  border: 1px solid black;
+  font-size: 24px;
+}
+.places,
+.cost {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.total,
+.cost-title,
+.service {
+  padding-top: 33px;
+  color: #928f94;
+}
+
+.total span {
+  color: #000000;
+}
+
+.service {
+  margin-right: 42px;
+}
+
+.upper,
+.lower,
+.price,
+.top_price,
+.bottom_price {
+  font-size: 24px;
+}
+.price,
+.top_price,
+.bottom_price {
+  font-weight: 700;
+}
+
+.price span,
+.top_price span,
+.bottom_price span{
+  font-weight: 400;
+  color: #928f94;
+}
+
+.coach-map-wrp {
+    border-bottom: 1px solid #c4c4c4
+}

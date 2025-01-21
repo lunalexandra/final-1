@@ -1,0 +1,168 @@
+.container {
+    background-color: #3E3C41;
+    width: 364px;
+    min-height: 20px;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.container h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 103px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.there, .back {
+    padding: 27px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 50px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    padding-left: 12px;
+}
+
+.date {
+    flex-grow: 1;
+    font-weight: 400;
+    padding-left: 12px;
+}
+
+.button {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 10px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  
+  .button:active {
+    color: #c4c4c4;
+    border: 2px solid #c4c4c4;
+  }
+  
+  .button:hover {
+    color: #fcdc9d;
+    border: 2px solid #fcdc9d;
+  }
+
+  .train-number {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .train-cities {
+    font-size: 16px;
+  }
+
+  .text {
+    font-weight: 400;
+    color: #928F94;
+  }
+
+  .number {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .train-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 22px;
+  }
+
+  .time {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: end;
+  }
+
+  .from {
+    text-align: left;
+  }
+
+  .to {
+    text-align: right;
+  }
+
+  .duration {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    gap: 10px;
+    color: #E5E5E5;
+    padding-top: 10px;
+  }
+
+  .from-time, .to-time {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .from-date, .to-date {
+    color: #928F94;
+  }
+
+  .cities {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 0;
+  }
+
+  .station {
+    color: #928F94;
+  }
+
+  .passengers {
+    padding: 14px 27px 46px;
+    border-bottom: 1px solid #E5E5E5;
+  }
+
+  .adults {
+    padding-bottom: 22px;
+  }
+
+  .adults, .kids {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.ruble {
+    font-size: 24px;
+    font-weight: 400;
+    color: #928F94;
+}
+
+.sum {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 30px 27px;
+}
+
+.total {
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFA800;
+}
+
+.total span {
+    font-weight: 300;
+    color: #E5E5E5;
+}

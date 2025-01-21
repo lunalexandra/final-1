@@ -1,4 +1,5 @@
 export interface Seats {
+  coach: {
     _id: string; // Идентификатор вагона
     name: string; // Название вагона
     class_type: string; // Тип вагона
@@ -15,14 +16,16 @@ export interface Seats {
     side_price: number; // Цена бокового места
     linens_price: number; // Цена постельного белья
     wifi_price: number; // Цена услуги Wi-Fi
-    avaliable_seats: number; // Количество свободных мест в вагоне
+    available_seats: number; // Количество свободных мест в вагоне
     is_linens_included: boolean; // Включена ли стоимость белья в стоимость билета
-    seats: {
-        index: number; // Номер места в вагоне
-        available: boolean; // Место доступно для бронирования
-    }; // Информация о посадочных местах
+  };
+seats: [{
+      index: number; // Номер места в вагоне
+      available: boolean; // Место доступно для бронирования
+    }];
+  // Информация о посадочных местах
 }
 
 export interface SeatsResponse {
-    carriages: Seats[]; // Массив вагонов с информацией о местах
+  carriages: Seats[]; // Массив вагонов с информацией о местах
 }

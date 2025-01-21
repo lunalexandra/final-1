@@ -7,8 +7,8 @@ interface SeatsState {
   seatsBack: Seats[]; // Места для направления "обратно"
   loading: boolean;
   error: string | null;
-  selectedCoachTo: Seats []; // Выбранный вагон для направления "туда"
-  selectedCoachBack: Seats []; // Выбранный вагон для направления "обратно"
+  selectedCoachTo: Seats []| null; // Выбранный вагон для направления "туда"
+  selectedCoachBack: Seats [] | null; // Выбранный вагон для направления "обратно"
 }
 
 const initialState: SeatsState = {
@@ -80,25 +80,15 @@ const seatsSlice = createSlice({
       state.seatsBack = [];
       state.error = null;
       state.loading = false;
-      state.selectedCoachTo = [];
-      state.selectedCoachBack = [];
+      state.selectedCoachTo = null;
+      state.selectedCoachBack = null;
     },
     // Теперь сохраняем не строку, а объект вагона
-    selectCoachTo(state, action: PayloadAction<Seats>) {
-      const exists = state.selectedCoachTo.some(coach => coach.coach.name === action.payload.coach.name);
-      if (!exists) {
-        state.selectedCoachTo.push(action.payload); // Добавление вагона
-      } else {
-        state.selectedCoachTo = state.selectedCoachTo.filter(coach => coach.coach.name !== action.payload.coach.name); // Удаление
-      }
+    selectCoachTo(state, action: PayloadAction<Seats[]>) {
+      state.selectedCoachTo = action.payload;
     },
-    selectCoachBack(state, action: PayloadAction<Seats>) {
-      const exists = state.selectedCoachBack.some(coach => coach.coach.name === action.payload.coach.name);
-      if (!exists) {
-        state.selectedCoachBack.push(action.payload);
-      } else {
-        state.selectedCoachBack = state.selectedCoachBack.filter(coach => coach.coach.name !== action.payload.coach.name);
-      }
+    selectCoachBack(state, action: PayloadAction<Seats[]>) {
+      state.selectedCoachBack = action.payload;
     },
   },
   extraReducers: (builder) => {

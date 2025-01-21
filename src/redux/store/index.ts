@@ -7,6 +7,7 @@ import directionReduser from "../slices/directionsSlice";
 import sortReduser from "../slices/sortSlice";
 import currentPageReducer from "../slices/currentPageSlice";
 import seatsReduser from "../slices/seatsSlice";
+import seatsListReduser from "../slices/seatsListSlice";
 
 export const store = configureStore({
   reducer: {
@@ -18,6 +19,7 @@ export const store = configureStore({
     sort: sortReduser,
     currentPage: currentPageReducer,
     seats: seatsReduser,
+    seats_list: seatsListReduser,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware()
 });

@@ -12,3 +12,10 @@ export function formatDuration(seconds: number): string {
     return `${days} ${dayStr} ${hours} ${hourStr} ${minutes} ${minuteStr}`;
 }
 
+export const formatDate = (timestamp: number | null | undefined): string => {
+    if (!timestamp) return '';
+    return new Date(timestamp * 1000).toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+  };

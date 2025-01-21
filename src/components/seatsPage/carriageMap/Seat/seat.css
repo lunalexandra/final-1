@@ -1,0 +1,16 @@
+.seat-first {}
+
+
+.unavailable {
+    background-color: #C4C4C4;
+    color: #fff;
+    font-weight: bold;
+}
+
+.available {
+    background-color: #F7F6F6;
+}
+
+.selected {
+    border: 2px solid #FFA800;
+}

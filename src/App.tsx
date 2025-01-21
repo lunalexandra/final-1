@@ -1,5 +1,5 @@
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider, /*Form*/ } from 'react-router-dom';
-import { HomePage, TrainPage} from './pages';
+import { HomePage, TrainPage, PassengersPage} from './pages';
 import { Layout } from './components/layout';
 
 import "./App.css";
@@ -10,6 +10,7 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route path="/" index element={<HomePage />} />
         <Route path="/trains" element={<TrainPage />} />
+        <Route path="/passengers" element={<PassengersPage />} />
         {/*
         
         <Route path="/timeattack" element={<TimeAttackPage />} />

@@ -1,0 +1,11 @@
+.first, .second, .third, .fourth {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 10px;
+    width: 100%;
+    padding: 70px 4%;
+}
+
+.selected {
+    border: 1px solid yellow;
+}

@@ -34,57 +34,6 @@
     background-color: #fff;
   }
   
-  .train {
-    display: flex;
-    justify-content: space-between;
-    gap: 4px;
-    padding: 10px 0;
-    align-items: center;
-    background-color: #f7f6f6;
-  }
-  .icon {
-    width: 30px;
-    margin-left: 35px;
-    margin-right: 30px;
-  }
-  
-  .number {
-    font-size: 24px;
-    font-weight: 700;
-  }
-  
-  .initial {
-    text-transform: capitalize;
-    color: #928f94;
-  }
-
-  .from, .to {
-    text-transform: capitalize;
-  }
-  
-.departure-city, .arrival-city {
-    text-transform: capitalize; 
-}
-
-  .departure-time, .arrival-time {
-      font-size: 24px;
-      font-weight: 700;
-  }
-  
-  .departure-station,
-  .arrival-station {
-    text-transform: capitalize;
-    color: #928f94;
-  }
-  
-  .duration {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      width: 200px;
-      padding: 46px;
-  }
-  
   .quantity-wrp {
       padding: 40px 19px;
   }
@@ -104,7 +53,7 @@
   border: 1px solid #FFA800C9;
   }
   
-  .input-box{
+  .quantity-box{
       border: 1px solid #928F94;
       height: 50px;
       border-radius: 5px;
@@ -148,76 +97,8 @@
   .types-text {
       margin-top: 18px;
   }
-  
-  .numbers {
-      display: flex;
-      justify-content: space-between;
-      height: 37px;
-      padding-right: 13px;
-      padding-left: 34px;
-      background: #FFA80070;
-      line-height: 37px;
-  }
-  
-  .numbers span {
-      font-size: 24px;
-      font-weight: 700;
-  }
-  
-  .carriage-number {
-      width: 20%;
-      padding-left: 4%;
-      padding-top: 33px;
-      padding-bottom: 32px;
-      background: #FFA80070;
-  }
-  
-  .carriage-number span {
-  padding-left: 12px;
-  }
-  
-  .numeric {
-      font-size: 72px;
-      font-weight: 700;
-  }
-  
-  .info {
-      display: flex;
-      justify-content: space-between;
-  }
-  
-  .places, .cost {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-  }
-  
-  .total, .cost-title, .service {
-  padding-top: 33px;
-  color: #928F94;
-  }
-  
-  .total span {
-      color: #000000;
-  }
-  
-  .service {
-      margin-right: 42px;
-  }
-  
-  .upper, .lower, .upper-number, .lower-number {
-      font-size: 24px;
-  }
-  
-  .upper span, .lower span {
-      font-weight: 700;
-  }
-  
-  .upper-number, .lower-number {
-      font-weight: 700;
-  }
-  
-  .upper-number span, .lower-number span {
-      font-weight: 400;
-      color: #928F94;
-  }
+.selected {
+  padding: 10px; 
+  background-color: #F7F6F6;
+}
+ 

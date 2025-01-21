@@ -11,3 +11,4 @@ export { ChangePlacesBtn } from "./buttons/changePlacesBtn";
 export { FindTicketsBtn } from "./buttons/findTicketsBtn";
 export { StepsBar } from "./stepsBar";
 export { Filter } from "./filter";
+export { PassengerList } from "./passengerList/PassengerList";

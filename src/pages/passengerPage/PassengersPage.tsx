@@ -3,11 +3,11 @@ import {
   SearchBlock,
   Footer,
   StepsBar,
+  PassengerList,
 } from "../../components";
-import DirectionsList from "../../components/directionsList/DirectionsList";
 import banner2 from "../../assets/images/second-banner.png";
 
-export const TrainPage = () => {
+export const PassengersPage = () => {
   return (
     <>
       <Header
@@ -28,9 +28,9 @@ export const TrainPage = () => {
           />
         }
       />
-      <StepsBar currentStep={1} />
+      <StepsBar currentStep={2} />
       <div className="main-container">
-          <DirectionsList/>
+        <PassengerList />
       </div>
       <Footer />
     </>

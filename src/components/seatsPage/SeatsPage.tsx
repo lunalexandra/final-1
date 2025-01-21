@@ -38,11 +38,6 @@ export const SeatsPage: React.FC<SeatsPageProps> = ({
     } else {
       console.error("Города не выбраны или ID отсутствует.");
     }
-
-    // Убираем вызов clearSeats, если он не нужен
-    return () => {
-      // Здесь можно добавить дополнительную логику, если потребуется
-    };
   }, [dispatch, direction, filtersTo, filtersBack]);
 
   return (
@@ -51,11 +46,13 @@ export const SeatsPage: React.FC<SeatsPageProps> = ({
       {direction?.arrival ? (
         <>
           <Carriage
+          seats={seats.seatsTo}
             type="туда"
             direction={direction}
             onReturn={onBackToDirections}
           />
           <Carriage
+          seats={seats.seatsBack}
             type="обратно"
             direction={direction}
             onReturn={onBackToDirections}
@@ -63,6 +60,7 @@ export const SeatsPage: React.FC<SeatsPageProps> = ({
         </>
       ) : (
         <Carriage
+        seats={seats.seatsTo}
           type="туда"
           direction={direction}
           onReturn={onBackToDirections}
