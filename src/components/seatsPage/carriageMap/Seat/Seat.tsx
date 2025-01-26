@@ -4,66 +4,78 @@ import { useAppDispatch } from "../../../../hooks";
 import { addSeat, removeSeat } from "../../../../redux/slices/seatsListSlice";
 import "./seat.css";
 
+interface Price {
+  top?: number;
+  bottom?: number;
+  standard?: number; // Цена для люкса и четвертого класса
+}
+
 interface SeatProps {
-  number: number;
+  seatNumber: number;
   isAvailable: boolean;
   isSelected: boolean;
   carType: "first" | "second" | "third" | "fourth";
   isAdult: boolean;
   coach_id: string;
   directionType: "туда" | "обратно"; // Направление
+  price: Price;
   onClick: () => void;
 }
 
 export const Seat: React.FC<SeatProps> = ({
-  number,
+  seatNumber,
   isAvailable,
   isSelected,
   carType,
   isAdult,
   coach_id,
   directionType,
+  price,
   onClick,
 }) => {
   const dispatch = useAppDispatch();
   const [tooltipVisible, setTooltipVisible] = useState(false);
 
-  // Сопоставляем русские направления с английскими
   const directionMap = {
     "туда": "to",
-    "обратно": "back"
+    "обратно": "back",
   } as const;
 
-  // Формируем класс для места
-  const seatClass = `${carType}-seat ${isAvailable ? "available" : "unavailable"} ${isSelected && isAvailable ? "selected" : ""}`;
+  // Определение цены для места в зависимости от типа и положения
+  const seatPrice =
+  carType === "first" || carType === "fourth"
+    ? price.standard ?? (console.error("Цена для люкса или 4 класса не задана"), 0)
+    : seatNumber % 2 === 0
+    ? price.top ?? (console.error("Цена для верхнего места не задана"), 0)
+    : price.bottom ?? (console.error("Цена для нижнего места не задана"), 0);
+
+  const seatClass = `${carType}-seat ${isAvailable ? "available" : "unavailable"} ${
+    isSelected && isAvailable ? "selected" : ""
+  }`;
 
   const handleClick = () => {
-    // Если место доступно
     if (isAvailable) {
-      setTooltipVisible(false); // Скрыть подсказку
-
+      setTooltipVisible(false);
       if (isSelected) {
-        // Если место выбрано, удаляем его
-        dispatch(removeSeat({ seatNumber: number, direction: directionMap[directionType] }));
+        dispatch(removeSeat({ seatNumber, direction: directionMap[directionType] }));
       } else {
-        // Если место не выбрано, добавляем его
-        dispatch(addSeat({ 
-          direction: directionMap[directionType], 
-          passenger: { seatNumber: number, isAdult, coach_id } 
-        }));
+        dispatch(
+          addSeat({
+            direction: directionMap[directionType],
+            passenger: { seatNumber, isAdult, coach_id, price: seatPrice },
+          })
+        );
       }
     } else {
-      // Если место занято, показываем подсказку
       setTooltipVisible(true);
-      setTimeout(() => setTooltipVisible(false), 1000); // Скрыть подсказку через 1 секунду
+      setTimeout(() => setTooltipVisible(false), 1000);
     }
-
-    onClick(); // Обработчик клика
+    onClick();
   };
 
   return (
     <div className={seatClass} onClick={handleClick}>
-      {number}
+      {seatNumber}
       {tooltipVisible && !isAvailable && <Tooltip content={"Место занято"} visible={tooltipVisible} />}
     </div>
   );

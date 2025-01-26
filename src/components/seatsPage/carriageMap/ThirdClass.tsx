@@ -3,14 +3,20 @@ import {Seat} from "./Seat/Seat";
 
 import classes from "./map.module.css";
 
+interface Price {
+    top?: number;
+    bottom?: number;
+  }
+
 interface ThirdClassProps {
   seats: { index: number; available: boolean }[] | undefined;
   isAdult: boolean;
   coach_id: string;
+  price: Price;
   directionType: "туда" | "обратно";
 }
 
-export const ThirdClass: React.FC<ThirdClassProps> = ({ seats, isAdult, coach_id, directionType }) => {
+export const ThirdClass: React.FC<ThirdClassProps> = ({ seats, isAdult, coach_id, directionType, price }) => {
   const [selectedSeats, setSelectedSeats] = useState<number[]>([]);
 
   // Генерация полного списка мест
@@ -30,13 +36,14 @@ export const ThirdClass: React.FC<ThirdClassProps> = ({ seats, isAdult, coach_id
       {allSeats.map((seat) => (
         <Seat
           key={seat.index}
-          number={seat.index}
+          seatNumber={seat.index}
           isAvailable={seat.available}
           isSelected={selectedSeats.includes(seat.index)}
           carType={"third"}
           isAdult={isAdult}
           coach_id={coach_id}
           directionType={directionType}
+          price={price}
           onClick={() => handleSeatClick(seat.index)}
         />
       ))}

@@ -1,14 +1,14 @@
-.age {
-    height: 130px;
-    padding: 36px 38px;
+.document {
+    max-width: 380px;
+    margin-top: 16px;
 }
 
 .select {
     position: relative;
-    width: 280px;
+    display: inline-block;
     height: 50px;
-    padding: 6px 13px;
-    border: 1px solid #C4C4C4;
+    padding: 6px 30px 6px 13px;
+    border: 1px solid #928F94;
     border-radius: 5px;
     background-color: white;
     font-size: 24px;
@@ -24,11 +24,9 @@
   }
 
   .option {
-    width: 280px;
+    max-width: 380px;
     height: 48px;
-    font-family: Roboto;
-font-size: 18px;
-font-weight: 400;
+    font-size: 24px;
     border-radius: 5px;
     border-bottom: 1px solid #C4C4C4;
     border-top: 1px solid #C4C4C4;

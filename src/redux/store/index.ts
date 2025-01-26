@@ -8,6 +8,8 @@ import sortReduser from "../slices/sortSlice";
 import currentPageReducer from "../slices/currentPageSlice";
 import seatsReduser from "../slices/seatsSlice";
 import seatsListReduser from "../slices/seatsListSlice";
+import selectedDirectionReducer from "../slices/selectedDirectionSlice";
+import orderReduser from "../slices/passengersSlise";
 
 export const store = configureStore({
   reducer: {
@@ -20,6 +22,8 @@ export const store = configureStore({
     currentPage: currentPageReducer,
     seats: seatsReduser,
     seats_list: seatsListReduser,
+    selectedDirection: selectedDirectionReducer,
+    order: orderReduser,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware()
 });

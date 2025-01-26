@@ -5,6 +5,7 @@ import {
   selectCoachTo,
   selectCoachBack,
 } from "../../../redux/slices/seatsSlice";
+import { formattedPrice } from "../../../helpers/formattedPrice";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
 import { FacilitiesBlock } from "../facilitiesBlock/FacilitiesBlock";
 import { RootState } from "../../../redux/store";
@@ -20,6 +21,7 @@ const classTypeComponents: Record<
     seats: { index: number; available: boolean }[] | undefined;
     isAdult: boolean;
     coach_id: string;
+    price: { top?: number; bottom?: number; standard?: number };
     directionType: "туда" | "обратно";
   }>
 > = {
@@ -44,8 +46,9 @@ export const ChoiceOfSeats: React.FC<ChoiceOfSeatsProps> = ({
   const { selectedCoachTo, selectedCoachBack } = useAppSelector(
     (state: RootState) => state.seats
   );
-
   const selectedCoaches = type === "туда" ? selectedCoachTo : selectedCoachBack;
+  const { to, back } = useAppSelector((state: RootState) => state.seats_list);
+  const seatData = type === "туда" ? to : back;
 
   const extractNumbers = (name: string | undefined) => {
     return name ? name.replace(/\D/g, "") : "";
@@ -174,13 +177,22 @@ export const ChoiceOfSeats: React.FC<ChoiceOfSeatsProps> = ({
                     directionType={type}
                     isAdult={isAdult}
                     coach_id={coach.coach._id}
+                    price={{
+                      top: coach.coach.top_price,
+                      bottom: coach.coach.bottom_price,
+                      standard: coach.coach.price, // Используем для люкса и четвертого класса
+                    }}
                   />
                 </div>
               </div>
             );
-          })}   
+          })} 
+   {selectedCoaches.length > 0 && (
+              <div className={classes.sum}>
+                {formattedPrice(seatData.total_price)} <span>₽</span>
+              </div>
+            )}
         </div>
-
         </>
       )}
     </>

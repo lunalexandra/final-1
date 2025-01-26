@@ -74,6 +74,11 @@
     color: #928F94;
   }
 
+
+  .name {
+    text-transform: capitalize;
+  }
+
   .number {
     font-size: 24px;
     font-weight: 700;
@@ -110,6 +115,11 @@
     padding-top: 10px;
   }
 
+  .arrow-duration {
+    align-self: center;
+    width: 30px;
+  }
+
   .from-time, .to-time {
     font-size: 24px;
     font-weight: 700;
@@ -123,6 +133,10 @@
     display: flex;
     justify-content: space-between;
     padding: 17px 0;
+  }
+
+  .from-city, .to-city {
+    text-transform: capitalize;
   }
 
   .station {

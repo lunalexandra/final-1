@@ -3,14 +3,20 @@ import {Seat} from "./Seat/Seat";
 
 import classes from "./map.module.css";
 
+interface Price {
+    top?: number;
+    bottom?: number;
+  }
+
 interface SecondClassProps {
   seats: { index: number; available: boolean }[] | undefined;
   isAdult: boolean;
   coach_id: string;
+  price: Price;
   directionType: "туда" | "обратно";
 }
 
-export const SecondClass: React.FC<SecondClassProps> = ({ seats, isAdult, coach_id, directionType}) => {
+export const SecondClass: React.FC<SecondClassProps> = ({ seats, isAdult, coach_id, directionType, price}) => {
   const [selectedSeats, setSelectedSeats] = useState<number[]>([]);
 
   // Генерация полного списка мест
@@ -30,13 +36,14 @@ export const SecondClass: React.FC<SecondClassProps> = ({ seats, isAdult, coach_
       {allSeats.map((seat) => (
         <Seat
           key={seat.index}
-          number={seat.index}
+          seatNumber={seat.index}
           isAvailable={seat.available}
           isSelected={selectedSeats.includes(seat.index)}
           carType={"second"}
           isAdult={isAdult}
           coach_id={coach_id}
           directionType={directionType}
+          price={price}
           onClick={() => handleSeatClick(seat.index)}
         />
       ))}

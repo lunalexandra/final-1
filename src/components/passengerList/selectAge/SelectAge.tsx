@@ -1,24 +1,50 @@
-// import { useState } from "react";
-// import { useAppDispatch, useAppSelector } from "../../../hooks";
-// import { RootState } from "../../../redux/store";
-import classes from ".//selectAge.module.css";
+import { useState } from "react";
+import classes from "./selectAge.module.css";
 
-export const SelectAge = () => {
+interface SelectAgeProps {
+  value: string;
+  onChange: (value: string) => void;
+  options: { value: string; label: string }[];
+}
+
+export const SelectAge: React.FC<SelectAgeProps> = ({
+  value,
+  onChange,
+  options,
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSelect = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  const handleOptionClick = (optionValue: string) => {
+    onChange(optionValue);
+    setIsOpen(false);
+  };
+
   return (
-      <div className={classes.dropdown}>▾
-        <div
-          //onClick={() => handleAgeChange("is_adult")}
-          className={classes.adult}
-        >
-          <p>Взрослый</p>
+    <div className={classes.age}>
+      {!isOpen && (
+        <div onClick={toggleSelect} style={{ cursor: "pointer" }} className={classes.select}>
+          {options.find((option) => option.value === value)?.label || "Выберите..."} <span>▼</span>
         </div>
- 
-        <div
-          //onClick={() => handleSortChange("duration")}
-          className={classes.child}
-        >
-          <p>Детский</p>
+      )}
+      
+      {isOpen && (
+        <div className={classes.optionsContainer}>
+          {options.map((option) => (
+            <div
+              className={classes.option}
+              key={option.value}
+              onClick={() => handleOptionClick(option.value)}
+              style={{ cursor: "pointer", padding: "5px" }}
+            >
+              {option.label}
+            </div>
+          ))}
         </div>
-      </div>
+      )}
+    </div>
   );
 };

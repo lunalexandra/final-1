@@ -5,6 +5,7 @@ import {
   fetchDirections,
   clearDirections,
 } from "../../redux/slices/directionsSlice";
+import { setDirection, clearDirection } from "../../redux/slices/selectedDirectionSlice";
 import { RootState } from "../../redux/store";
 import { LoadingPage } from "../loadingPage/LoadingPage";
 import { TrainInfo } from "../../types/TrainInfo";
@@ -20,18 +21,16 @@ const DirectionsList: React.FC = () => {
   const [currentView, setCurrentView] = useState<"directions" | "seats">(
     "directions"
   );
-  const [selectedDirection, setSelectedDirection] = useState<TrainInfo | null>(
-    null
-  );
+  const selectedDirection = useAppSelector((state) => state.selectedDirection.direction);
 
   const showSeats = (direction: TrainInfo) => {
-    setSelectedDirection(direction);
+    dispatch(setDirection(direction));
     setCurrentView("seats");
   };
 
   const goBackToDirections = () => {
     setCurrentView("directions");
-    setSelectedDirection(null);
+    dispatch(clearDirection());
   };
 
   const { directions, total_count, loading, error } = useAppSelector(

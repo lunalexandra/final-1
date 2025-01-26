@@ -30,6 +30,7 @@
 }
 
 .carriages-box {
+  position: relative;
     display: flex;
     flex-direction: column;
     gap: 33px;
@@ -110,4 +111,21 @@
 
 .coach-map-wrp {
     border-bottom: 1px solid #c4c4c4
+}
+
+.sum {
+  position: absolute;
+  bottom: 28px;
+  right: 39px;;
+  height: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFA800;
+  margin-top: -1px;
+  border: 1px solid #fff;
+}
+.sum span {
+  font-weight: 400;
+  color: #928f94;
+  padding-left: 10px;
 }

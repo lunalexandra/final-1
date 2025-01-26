@@ -1,4 +1,5 @@
-import { convertSecondsToTime } from "../convertSecondsToTime"; 
+import { convertSecondsToTime } from "../../../helpers/convertSecondsToTime"; 
+import { formattedPrice } from "../../../helpers/formattedPrice";
 import arrowRight from "../../../assets/images/trains/right.png";
 import arrowLeft from "../../../assets/images/trains/left.png";
 import trainIcon from "../../../assets/images/trains/train.png";
@@ -139,7 +140,7 @@ export const TrainCard: React.FC<TrainCardProps> = ({
               <div className={classes.quantity}>{seats_info[classType]}</div>
               <div className={classes.price}><span>от </span> 
                 <span className={classes.amount}>
-                {price_info[classType]?.bottom_price ?? '—'}
+                {formattedPrice(price_info[classType]?.bottom_price) ?? '—'}
                 </span>
                 <span className={classes.ruble}>₽</span>
               </div>

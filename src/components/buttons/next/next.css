@@ -1,0 +1,42 @@
+.next-wrp {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+.next {
+    width: 222px;
+    height: 60px;
+    background-color: #FFA800;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    margin-top: 122px;
+    cursor: pointer;
+  }
+  
+.next:hover {
+    box-shadow: 0px 4px 4px 0px #00000040;
+  }
+  
+  .next:active {
+    background-color: #fff;
+    color: #FFA800;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    border: 1px solid #FFA800
+  }
+
+  .next-inactive {
+    width: 222px;
+    height: 60px;
+    background-color: #928F94;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    margin-top: 122px;
+    cursor: pointer;
+  }

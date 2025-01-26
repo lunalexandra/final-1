@@ -1,9 +1,11 @@
 import { useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import {
   fetchSeatsTo,
   fetchSeatsBack,
 } from "../../redux/slices/seatsSlice";
+import { NextBtn } from "../buttons/next/NextBtn";
 import { RootState } from "../../redux/store";
 import { Carriage } from "./сarriage/Carriage";
 import { TrainInfo } from "../../types/TrainInfo";
@@ -22,6 +24,12 @@ export const SeatsPage: React.FC<SeatsPageProps> = ({
   const seats = useAppSelector((state: RootState) => state.seats);
   const filtersTo = useAppSelector((state: RootState) => state.filterCarriages.filtersTo);
   const filtersBack = useAppSelector((state: RootState) => state.filterCarriages.filtersBack);
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/passengers`);
+  };
 
   useEffect(() => {
     if (direction && direction.departure._id) { // Проверяем, что direction и id существуют
@@ -66,6 +74,7 @@ export const SeatsPage: React.FC<SeatsPageProps> = ({
           onReturn={onBackToDirections}
         />
       )}
+      <NextBtn active={true} type={"button"} onClick={handleClick}  />
     </div>
   );
 };

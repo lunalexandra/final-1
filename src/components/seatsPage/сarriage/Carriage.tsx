@@ -8,7 +8,7 @@ import { Seats } from "../../../types/Seats";
 import { FilterIcon } from "../filterIcon/FilterIcon";
 import { TrainBlock } from "../trainBlock/TrainBlock";
 import { ChoiceOfSeats } from "../choiceOfSeats/ChoiceOfSeats";
-import { declinePassenger, declineChild } from "../../../wordForms/wordForms";
+import { declinePassenger, declineChild } from "../../../helpers/wordForms";
 import thereIcon from "../../../assets/images/seats/there.png";
 import backIcon from "../../../assets/images/seats/back.png";
 import class1Icon from "../../../assets/images/seats/1class.png";
@@ -83,10 +83,11 @@ export const Carriage: React.FC<CarriageProps> = ({
               selectedType === "adult" ? classes.selected : classes.adults
             }
           >
-            <div className={classes["quantity-box"]}>Взрослых - {seatData.adults}</div>
+            <div className={classes["quantity-box"]}>
+              Взрослых - {seatData.adults}
+            </div>
             <div className={classes.add}>
-              Можно добавить еще {" "}
-              {declinePassenger(3)} 
+              Можно добавить еще {declinePassenger(3)}
             </div>
           </div>
           <div
@@ -97,7 +98,9 @@ export const Carriage: React.FC<CarriageProps> = ({
               selectedType === "child" ? classes.selected : classes.kids
             }
           >
-            <div className={classes["quantity-box"]}>Детских - {seatData.children}</div>
+            <div className={classes["quantity-box"]}>
+              Детских - {seatData.children}
+            </div>
             <div className={classes.add}>
               Можно добавить еще {declineChild(3)} до 10 лет.Свое место в
               вагоне, как у взрослых, но дешевле в среднем на 50-65%
@@ -165,6 +168,7 @@ export const Carriage: React.FC<CarriageProps> = ({
           type={type}
           isAdult={selectedType === "adult"}
         />
+
       </div>
     </div>
   );

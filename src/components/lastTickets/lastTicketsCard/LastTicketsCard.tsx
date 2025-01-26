@@ -1,4 +1,7 @@
 import tripleIcons from "../../../assets/images/triple.png";
+import { formattedPrice } from "../../../helpers/formattedPrice";
+
+
 interface LastTicketsCardProps {
   cityFrom: string;
   cityTo: string;
@@ -30,7 +33,7 @@ const LastTicketsCard: React.FC<LastTicketsCardProps> = ({
           <img src={tripleIcons} alt="" />
         </div>
         <p className={classes.price}>
-          от <span className={classes.amount}>{price}</span>
+          от <span className={classes.amount}>{formattedPrice(price)}</span>
           <span className={classes.ruble}>₽</span>
         </p>
       </div>

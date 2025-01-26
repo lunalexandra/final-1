@@ -14,7 +14,7 @@ const currentPageSlice = createSlice({
   reducers: {
     setCurrentPage: (state, action: PayloadAction<number>) => {
       state.currentPage = action.payload;
-      console.log(`Срез текущая страница${state.currentPage}`)
+      //console.log(`Срез текущая страница${state.currentPage}`)
     },
   },
 });
