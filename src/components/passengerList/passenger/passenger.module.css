@@ -101,7 +101,7 @@
   padding: 48px 36px;
 }
 
-.radio-container {
+.gender-selection {
   display: flex;
   width: 204px;
   height: 50px;
@@ -110,24 +110,15 @@
   border-radius: 5px;
 }
 
-.radio {
-  display: none; /* Скрыть стандартные радио-кнопки */
-}
-
-.castom-radio {
+.gender-block{
   text-align: center;
   width: 50%;
   font-size: 30px;
   font-weight: 900;
-}
-
-.castom-radio label {
-  display: block;
   padding-top: 6px;
-  height: 100%;
 }
 
-.castom-radio:first-child label {
+.gender-block:first-child {
   border-right: 1px solid #928f94;
 }
 

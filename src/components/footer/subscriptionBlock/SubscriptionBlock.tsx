@@ -32,7 +32,6 @@ export const SubscriptionBlock = () => {
 
     console.log("Проверяем email:", email);
 
-    // Проверяем, если поле пустое или содержит только пробелы
     if (!email.trim()) {
       console.log("Email пустой или состоит из пробелов.");
       setStatus("error");
@@ -42,9 +41,7 @@ export const SubscriptionBlock = () => {
       return;
     }
 
-    // Проверяем формат email
     if (!validateEmail(email)) {
-      console.log("Email некорректный.");
       setStatus("error");
       setTooltipMessage("Введите корректный email");
       setShowTooltip(true);

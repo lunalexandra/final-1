@@ -1,0 +1,102 @@
+.container {
+  position: absolute;
+  top: -350px;
+  width: 80%;
+}
+
+.title {
+  background-color: transparent;
+  font-family: Roboto;
+  font-size: 72px;
+  font-weight: 700;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 60px 80px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #3e3c41;
+}
+
+.gray {
+  font-weight: 400;
+  padding: 0 10px;
+  color: #928f94;
+}
+
+.instructions {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  background-color: #f4f3f6;
+  padding: 40px 25%;
+}
+
+.step {
+    width: 200px;
+  text-align: center;
+}
+
+.instructions img {
+  width: 150px;
+  margin-bottom: 6px;
+}
+
+.info {
+  padding: 95px 10%;
+  font-size: 24px;
+  font-weight: 400;
+  color: #292929;
+  background-color: #fff;
+}
+
+.name {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.gratitude {
+  font-weight: 700;
+  margin-top: 60px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 80px;
+  color: #292929;
+  background-color: #ffa800e0;
+}
+
+.estimation {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  height: 60px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  color: #292929;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #3e3c41;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.btn:active {
+    color: #fff;
+    border: 1px solid #fff;
+}

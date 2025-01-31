@@ -74,14 +74,19 @@ export const orderSlice = createSlice({
             state.order.arrival = { route_direction_id: '', seats: [] }; // Сброс данных при отсутствии arrival
           }
     },
+    addUserInfo: (state, action: PayloadAction<UserInfo>) => {
+        state.order.user = { ...state.order.user, ...action.payload }; // Объединение текущих данных с новыми
+        console.log('Добавлен пользователь:', JSON.parse(JSON.stringify(state.order.user)));
+      },
     // Добавление места
     addSeat: (state, action: PayloadAction<{ route: 'departure' | 'arrival'; seat: SeatInfo }>) => {
         const { route, seat } = action.payload;
         if (route === 'departure') {
           state.order.departure.seats.push(seat);
-          console.log(state.order.departure.seats)
+          console.log('Добавлено место для отправления:', JSON.parse(JSON.stringify(state.order.departure.seats)));
         } else if (state.order.arrival) { // Проверяем, есть ли arrival
           state.order.arrival.seats.push(seat);
+          console.log('Добавлено место для возвращения:', JSON.parse(JSON.stringify(state.order.arrival.seats)));
         }
     },
     // Удаление места
@@ -113,5 +118,5 @@ export const orderSlice = createSlice({
   },
 });
 
-export const { setUserInfo, setDeparture, setArrival, addSeat, removeSeat, clearOrder } = orderSlice.actions;
+export const { setUserInfo, setDeparture, setArrival, addSeat, addUserInfo, removeSeat, clearOrder } = orderSlice.actions;
 export default orderSlice.reducer;

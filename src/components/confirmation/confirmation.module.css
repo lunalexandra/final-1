@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.title {
+  padding: 30px;
+  font-size: 30px;
+  font-weight: 400;
+  border-bottom: 1px solid #928f94;
+}
+.card {
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 2px 0px #00000040;
+}
+
+.confirm {
+  display: flex;
+  justify-content: end;
+}
+
+.btn {
+  width: 323px;
+  height: 60px;
+  background-color: #ffa800;
+  border: none;
+  margin-top: 100px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn:hover {
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.btn:active {
+    color: #FFA800;
+    background-color: #fff;
+    border: 1px solid #FFA800
+}

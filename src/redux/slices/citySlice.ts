@@ -50,6 +50,11 @@ const citiesSlice = createSliceWithThunk({
       state.toCity = action.payload;
     }),
 
+    clearCities: create.reducer((state) => {
+      state.fromCity = { name: "", _id: "" }; // Сброс значения fromCity
+      state.toCity = { name: "", _id: "" }; // Сброс значения toCity
+    }),
+
     clearSuggestions: create.reducer((state) => {
       state.departureSuggestions = [];
       state.destinationSuggestions = [];
@@ -136,5 +141,5 @@ const citiesSlice = createSliceWithThunk({
 
 });
 
-export const { setFromCity, setToCity, clearSuggestions, fetchDepartureSuggestions, fetchDestinationSuggestions, swapCities } = citiesSlice.actions;
+export const { setFromCity, setToCity, clearCities, clearSuggestions, fetchDepartureSuggestions, fetchDestinationSuggestions, swapCities } = citiesSlice.actions;
 export default citiesSlice.reducer;

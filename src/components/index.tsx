@@ -12,3 +12,6 @@ export { FindTicketsBtn } from "./buttons/findTicketsBtn";
 export { StepsBar } from "./stepsBar";
 export { Filter } from "./filter";
 export { PassengerList } from "./passengerList/PassengerList";
+export { Payment } from "./payment/Payment";
+export { Confirmation } from "./confirmation/Confirmation";
+export { ThankYouBlock } from "./thankYouBlock/ThankYouBlock";
