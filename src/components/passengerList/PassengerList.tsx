@@ -13,10 +13,10 @@ export const PassengerList = () => {
 const navigate = useNavigate();
 const dispatch = useAppDispatch();
   const { to, back } = useAppSelector((state: RootState) => state.seats_list);
+  const {allValid} = useAppSelector((state: RootState) => state.order);
   
-  // Здесь тип рефа: React.RefObject<Passenger | null> для каждого пассажира
   const passengerRefs = useRef<(PassengerHandle | null)[]>([]);
-
+  
   const [passengers, setPassengers] = useState([{ id: 1 }]);
 
   const onNextPassenger = () => {
@@ -38,6 +38,10 @@ const dispatch = useAppDispatch();
   };
 
   const handleSubmitAll = () => {
+    if (!allValid) {
+      console.log("Не все формы валидны. Отправка отменена.");
+      return; // Прекращаем выполнение, если не все формы валидны
+    }
     dispatch(clearOrder())
     passengerRefs.current.forEach((ref, index) => {
       if (ref) {
@@ -85,7 +89,7 @@ const dispatch = useAppDispatch();
         <NextBtn 
           type={"submit"} 
           onClick={handleSubmitAll} 
-          active={passengers.length === to.total_seats} // Только если все пассажиры добавлены
+          active={passengers.length === to.total_seats && allValid} // Только если все пассажиры добавлены и валидны
         />
       </main>
     </>

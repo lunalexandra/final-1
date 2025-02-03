@@ -6,6 +6,7 @@
 .select {
     position: relative;
     display: inline-block;
+    white-space: nowrap;
     height: 50px;
     padding: 6px 30px 6px 13px;
     border: 1px solid #928F94;
@@ -25,7 +26,7 @@
 
   .option {
     max-width: 380px;
-    height: 48px;
+    height: auto;
     font-size: 24px;
     border-radius: 5px;
     border-bottom: 1px solid #C4C4C4;

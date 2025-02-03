@@ -9,10 +9,10 @@ import { formattedPrice } from "../../../helpers/formattedPrice";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
 import { FacilitiesBlock } from "../facilitiesBlock/FacilitiesBlock";
 import { RootState } from "../../../redux/store";
-import { FirstClass } from "../carriageMap/FirstClass";
-import { SecondClass } from "../carriageMap/SecondClass";
-import { ThirdClass } from "../carriageMap/ThirdClass";
-import { FourthClass } from "../carriageMap/FourthClass";
+import { FirstClassMap } from "../carriageMap/first/FirstClassMap";
+import { SecondClassMap } from "../carriageMap/second/SecondClassMap";
+import { ThirdClassMap } from "../carriageMap/third/ThirdClassMap";
+import { FourthClassMap } from "../carriageMap/fourth/FourthClassMap";
 import classes from "./choiceOfSeats.module.css";
 
 const classTypeComponents: Record<
@@ -23,12 +23,13 @@ const classTypeComponents: Record<
     coach_id: string;
     price: { top?: number; bottom?: number; standard?: number };
     directionType: "туда" | "обратно";
+    coach_name?: string;
   }>
 > = {
-  first: FirstClass,
-  second: SecondClass,
-  third: ThirdClass,
-  fourth: FourthClass,
+  first: FirstClassMap,
+  second: SecondClassMap,
+  third: ThirdClassMap,
+  fourth: FourthClassMap,
 };
 
 interface ChoiceOfSeatsProps {
@@ -182,6 +183,7 @@ export const ChoiceOfSeats: React.FC<ChoiceOfSeatsProps> = ({
                       bottom: coach.coach.bottom_price,
                       standard: coach.coach.price, // Используем для люкса и четвертого класса
                     }}
+                    coach_name={extractNumbers(coach.coach.name)}
                   />
                 </div>
               </div>

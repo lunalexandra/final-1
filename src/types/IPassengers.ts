@@ -4,7 +4,7 @@ export interface UserInfo {
     patronymic: string;
     phone: string;
     email: string;
-    payment_method: "cash" | "online"; // Тип оплаты
+    payment_method: "cash" | "online";
   }
   
   export interface PersonInfo {
@@ -14,8 +14,8 @@ export interface UserInfo {
     patronymic: string;
     gender: boolean; // true для мужчины, false для женщины
     birthday: string; // Формат даты: YYYY-MM-DD
-    document_type: string; // Тип документа, например: "паспорт"
-    document_data: string; // Данные документа
+    document_type: string;
+    document_data: string;
   }
   
   export interface SeatInfo {
@@ -33,7 +33,7 @@ export interface UserInfo {
   
   export interface OrderRequest {
     user: UserInfo;
-    departure: RouteInfo; // Данные по отправлению
-    arrival?: RouteInfo; // Данные по возвращению
+    departure: RouteInfo;
+    arrival?: RouteInfo;
   }
   

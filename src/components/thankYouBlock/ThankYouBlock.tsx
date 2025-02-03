@@ -56,7 +56,7 @@ export const ThankYouBlock = () => {
             </div>
             <div className={classes.info}>
               <p className={classes.name}>
-                {user.first_name} {user.last_name}!
+                {user.first_name} {user.patronymic}!
               </p>
               <p>
                 Ваш заказ успешно оформлен. В ближайшее время с вами свяжется

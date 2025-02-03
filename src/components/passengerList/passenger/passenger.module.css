@@ -1,5 +1,5 @@
 .form {
-    margin-bottom: 45px;
+  margin-bottom: 45px;
   border: 1px solid #c4c4c4;
   box-shadow: 0px 2px 2px 0px #00000040;
 }
@@ -62,8 +62,8 @@
 }
 
 .cross:hover {
-    cursor: pointer;
-    box-shadow: 0px 2px 2px 0px #00000040;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px 0px #00000040;
 }
 
 .complete-name {
@@ -81,6 +81,7 @@
 
 .input-container input {
   height: 50px;
+  width: 100%;
   max-width: 280px;
   border: 1px solid #928f94;
   padding: 6px 15px;
@@ -110,7 +111,7 @@
   border-radius: 5px;
 }
 
-.gender-block{
+.gender-block {
   text-align: center;
   width: 50%;
   font-size: 30px;
@@ -206,33 +207,31 @@
 }
 
 .end img {
- width: 32px; 
- height: 32px; 
+  width: 32px;
+  height: 32px;
 }
-
 
 .error {
-    display: flex; 
-    justify-content: start;
-    align-items: center;
-    font-size: 18px;
-    gap: 16px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 18px;
+  gap: 16px;
   padding: 24px 35px 30px 31px;
-    background-color: #FF3D0061;
+  background-color: #ff3d0061;
 }
 
-
 .error img {
-    width: 32px; 
-    height: 32px; 
-   }
+  width: 32px;
+  height: 32px;
+}
 
 .error ul {
-    list-style-type: none;
-   }
+  list-style-type: none;
+}
 
 .next-passenger-btn {
-    padding: 12px 23px;
+  padding: 12px 23px;
   font-size: 24px;
   font-weight: 700;
   color: #292929;

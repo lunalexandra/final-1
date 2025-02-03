@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { ChangeBtn } from "../changeBtn/ChangeBtn";
-//import { clearOrder } from "../../../redux/slices/passengersSlise";
 import { useAppSelector } from "../../../hooks";
 import { RootState } from "../../../redux/store";
 import { formattedPrice } from "../../../helpers/formattedPrice";
@@ -9,7 +8,6 @@ import classes from "./passengerData.module.css";
 import { SeatInfo } from "../../../types/IPassengers";
 
 export const PassengerData = () => {
-    //const dispatch = useAppDispatch();
   const order = useAppSelector((state: RootState) => state.order);
   const seats = order.order.departure.seats;
   const { total_combined_price } = useAppSelector((state: RootState) => state.seats_list);
@@ -17,7 +15,6 @@ export const PassengerData = () => {
 
 const onChangePassengers = () => {
     navigate(`/passengers`)
-    //dispatch(clearOrder());
       }
 
   return (
@@ -32,7 +29,7 @@ const onChangePassengers = () => {
               </div>
               <div>
                 <p>
-                  {seat.person_info.first_name} {seat.person_info.last_name}{" "}
+                 {seat.person_info.last_name}{" "}{seat.person_info.first_name}{" "}
                   {seat.person_info.patronymic}
                 </p>{" "}
                 <p className={classes.gray}>
@@ -55,7 +52,6 @@ const onChangePassengers = () => {
             <span className={classes.ruble}>₽</span>
           </div>
           <ChangeBtn onClick={onChangePassengers}/>
-          {/* Укажите правильный маршрут для перехода */}
         </div>
       </div>
     </>

@@ -19,8 +19,8 @@ const datesSlice = createSlice({
       //console.log(`Срез дата оттуда${state.date_end}`)
     },
     clearDates: (state) => {
-      state.date_start = ""; // Сброс значения date_start
-      state.date_end = "";   // Сброс значения date_end
+      state.date_start = "";
+      state.date_end = "";
     },
   },
 });

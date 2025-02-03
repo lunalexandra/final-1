@@ -104,8 +104,8 @@ const Slider: React.FC<SliderProps> = ({ type, min, max, step }) => {
         step={step}
         min={min}
         max={max}
-        onChange={setValues} // Обновляем локальное состояние
-        onFinalChange={handleFinalChange} // Обновляем Redux только при завершении изменения
+        onChange={setValues}
+        onFinalChange={handleFinalChange}
         renderTrack={({ props, children }) => (
           <div
             {...props}

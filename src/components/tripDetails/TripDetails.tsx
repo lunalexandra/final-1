@@ -17,7 +17,7 @@ export const TripDetails = () => {
   const [isExpandedThere, setIsExpandedThere] = useState<boolean>(false);
   const [isExpandedBack, setIsExpandedBack] = useState<boolean>(false);
   const [isExpandedPassengers, setIsExpandedPassengers] =
-    useState<boolean>(false); // Новое состояние для пассажиров
+    useState<boolean>(false);
 
   const { direction } = useAppSelector(
     (state: RootState) => state.selectedDirection

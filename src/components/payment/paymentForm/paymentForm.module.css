@@ -24,6 +24,7 @@
 
 .complete-name {
   display: flex;
+  gap: 6px;
   justify-content: space-between;
   padding: 30px 35px;
 }
@@ -41,6 +42,7 @@
 }
 
 .input-container input {
+  width: 100%;
   height: 50px;
   max-width: 280px;
   margin-right: 4px;

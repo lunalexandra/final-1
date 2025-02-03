@@ -1,7 +1,12 @@
 import { useState, useEffect, forwardRef, useImperativeHandle } from "react";
 import { PersonInfo } from "../../../types/IPassengers";
-import { addSeat } from "../../../redux/slices/passengersSlise";
+import {
+  addSeat,
+  setPassengerValidation,
+  checkAllValidations,
+} from "../../../redux/slices/passengersSlise";
 import { SelectAge } from "../selectAge/SelectAge";
+import { Modal } from "../../modal/Modal";
 import { SelectDocument } from "../selectDocument/selectDocument";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
 import { validateForm } from "../../../helpers/validatePassengerInfo";
@@ -58,16 +63,21 @@ export const Passenger = forwardRef<PassengerHandle, PassengerProps>(
 
     const [errors, setErrors] = useState<{ [key: string]: string | null }>({});
     const [isValid, setIsValid] = useState<boolean>(false);
+    const [isVisible, setIsVisible] = useState<boolean>(false);
 
     const toggleExpandedPassenger = () => {
       setIsExpandedPassenger((prevState) => !prevState);
     };
 
+    const openModal = () => {
+      setIsVisible(true);
+    };
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      const { name, value } = e.target; // Исправлено: теперь используется деструктуризация
+      const { name, value } = e.target;
       setPersonInfo((prevInfo) => ({
         ...prevInfo,
-        [name]: value, // Исправлено: теперь обновляется состояние на основе имени поля
+        [name]: value,
       }));
     };
 
@@ -115,7 +125,7 @@ export const Passenger = forwardRef<PassengerHandle, PassengerProps>(
       if (personInfo.document_type === "passport") {
         fullDocumentData = `${passportSeries} ${passportNumber}`;
       } else {
-        fullDocumentData = personInfo.document_data; // Здесь предполагаем, что это номер свидетельства о рождении
+        fullDocumentData = personInfo.document_data;
       }
 
       const seatTo = {
@@ -160,6 +170,21 @@ export const Passenger = forwardRef<PassengerHandle, PassengerProps>(
       }
     };
 
+    useEffect(() => {
+      if (
+        personInfo.document_type === "birth_certificate" &&
+        personInfo.is_adult
+      ) {
+        openModal();
+      }
+    }, [personInfo.document_type, personInfo.is_adult]);
+
+    useEffect(() => {
+      console.log(`00`);
+      dispatch(setPassengerValidation({ index: number - 1, isValid }));
+      dispatch(checkAllValidations());
+    }, [isValid]);
+
     // useEffect для сброса ошибок, когда меняется тип документа
     useEffect(() => {
       if (personInfo.document_type !== "passport") {
@@ -192,19 +217,19 @@ export const Passenger = forwardRef<PassengerHandle, PassengerProps>(
 
     useImperativeHandle(ref, () => ({
       handleSubmit: () => {
-        console.log(`handleSubmit вызван для пассажира ${number}`);
+        //console.log(`handleSubmit вызван для пассажира ${number}`);
         handleSubmit(); // вызываем handleSubmit, переданный в компонент
       },
     }));
 
     useEffect(() => {
       if (passengerData) {
-        setPersonInfo(passengerData.person_info); // Загружаем данные пассажира из Redux
-        // Инициализируем passportSeries и passportNumber из passengerData
+        setPersonInfo(passengerData.person_info);
+
         const [series, number] =
           passengerData.person_info.document_data.split(" ");
-        setPassportSeries(series || ""); // Устанавливаем серию паспорта
-        setPassportNumber(number || ""); // Устанавливаем номер паспорта
+        setPassportSeries(series || "");
+        setPassportNumber(number || "");
       }
     }, [passengerData]);
 
@@ -244,20 +269,6 @@ export const Passenger = forwardRef<PassengerHandle, PassengerProps>(
               />
               <div className={classes["complete-name"]}>
                 <div className={classes["input-container"]}>
-                  <label htmlFor="first_name" className={classes.label}>
-                    Имя
-                  </label>
-                  <input
-                    id="first_name"
-                    type="text"
-                    name="first_name"
-                    value={personInfo.first_name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className={classes["input-container"]}>
                   <label htmlFor="last_name" className={classes.label}>
                     Фамилия
                   </label>
@@ -266,6 +277,20 @@ export const Passenger = forwardRef<PassengerHandle, PassengerProps>(
                     type="text"
                     name="last_name"
                     value={personInfo.last_name}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div className={classes["input-container"]}>
+                  <label htmlFor="first_name" className={classes.label}>
+                    Имя
+                  </label>
+                  <input
+                    id="first_name"
+                    type="text"
+                    name="first_name"
+                    value={personInfo.first_name}
                     onChange={handleChange}
                     required
                   />
@@ -436,6 +461,12 @@ export const Passenger = forwardRef<PassengerHandle, PassengerProps>(
               )}
             </>
           )}
+          <Modal
+            modalType="info"
+            children={<p>Обратите внимание на тип документа</p>}
+            isOpen={isVisible}
+            onClose={() => setIsVisible(false)}
+          />
         </form>
       </>
     );

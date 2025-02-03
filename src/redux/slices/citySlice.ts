@@ -6,7 +6,6 @@ import {
 
 import { City } from "../../types/SearchOptions";
 
-// Тип состояния для городов
 interface CitiesState {
   fromCity: City; // Город отправления
   toCity: City; // Город прибытия
@@ -14,10 +13,9 @@ interface CitiesState {
   destinationSuggestions: City[]; // Подсказки городов прибытия
   loadingFromCity: boolean; // Состояние загрузки для отправления
   loadingToCity: boolean; // Состояние загрузки для прибытия
-  error: string | null; // Ошибка
+  error: string | null;
 }
 
-// Начальное состояние
 const initialState: CitiesState = {
   fromCity: { name: "", _id: "" },
   toCity: { name: "", _id: "" },

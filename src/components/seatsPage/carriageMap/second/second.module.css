@@ -1,0 +1,256 @@
+.second {
+  position: relative;
+  width: 921px;
+  height: 145px;
+  background-image: url(../../../../assets//images/seats/first_class.png);
+  margin: 68px auto 80px;
+}
+
+.places {
+  position: absolute;
+  top: 29px;
+  left: 134px;
+  width: 712px;
+  height: 64px;
+  background-color: #fff;
+}
+
+.place {
+  position: absolute;
+  text-align: center;
+  width: 26px;
+  height: 31px;
+  font-weight: 700;
+}
+
+.second-2,
+.second-4,
+.second-6,
+.second-8,
+.second-10,
+.second-12,
+.second-14,
+.second-16,
+.second-18,
+.second-20,
+.second-22,
+.second-24,
+.second-26,
+.second-28,
+.second-30,
+.second-32,
+.second-34,
+.second-36 {
+  top: 0;
+}
+
+.second-1,
+.second-3,
+.second-5,
+.second-7,
+.second-9,
+.second-11,
+.second-13,
+.second-15,
+.second-17,
+.second-19,
+.second-21,
+.second-23,
+.second-25,
+.second-27,
+.second-29,
+.second-31,
+.second-33,
+.second-35 {
+  top: 31px;
+  border-bottom: 4px solid #928f8f;
+}
+
+.second-2 {
+  left: 0;
+}
+
+.second-1 {
+  left: 0;
+}
+
+.second-4 {
+  left: 52px;
+}
+
+.second-3 {
+  left: 52px;
+}
+
+.second-6 {
+  left: 78px;
+}
+
+.second-5 {
+  left: 78px;
+}
+
+.second-8 {
+  left: 130px;
+}
+
+.second-7 {
+  left: 130px;
+}
+
+.second-10 {
+  left: 156px;
+}
+
+.second-9 {
+  left: 156px;
+}
+
+.second-12 {
+  left: 208px;
+}
+
+.second-11 {
+  left: 208px;
+}
+
+.second-14 {
+  left: 234px;
+}
+
+.second-13 {
+  left: 234px;
+}
+
+.second-16 {
+  left: 286px;
+}
+
+.second-15 {
+  left: 286px;
+}
+
+.second-18 {
+  left: 312px;
+}
+
+.second-17 {
+  left: 312px;
+}
+
+.second-20 {
+  left: 364px;
+}
+
+.second-19 {
+  left: 364px;
+}
+
+.second-22 {
+  left: 390px;
+}
+
+.second-21 {
+  left: 390px;
+}
+
+.second-24 {
+  left: 442px;
+}
+
+.second-23 {
+  left: 442px;
+}
+
+.second-26 {
+  left: 468px;
+}
+
+.second-25 {
+  left: 468px;
+}
+
+.second-28 {
+  left: 520px;
+}
+
+.second-27 {
+  left: 520px;
+}
+
+.second-30 {
+  left: 546px;
+}
+
+.second-29 {
+  left: 546px;
+}
+
+.second-32 {
+  left: 604px;
+}
+
+.second-31 {
+  left: 604px;
+}
+
+.second-34 {
+  right: 56px;
+}
+
+.second-33 {
+  right: 56px;
+}
+
+.second-36 {
+  right: 0;
+}
+
+.second-35 {
+  right: 0;
+}
+
+.second-3,
+.second-4,
+.second-7,
+.second-8,
+.second-11,
+.second-12,
+.second-16,
+.second-15,
+.second-20,
+.second-19,
+.second-24,
+.second-23,
+.second-28,
+.second-27,
+.second-32,
+.second-31 {
+  border-right: 4px solid #928f8f;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 30px;
+  height: 24px;
+  background-color: #393737;
+  font-weight: 700;
+  color: #fff;
+}
+
+.info {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  padding: 10px;
+  width: 200px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #292929;
+  background-color: #f3f3f3;
+}

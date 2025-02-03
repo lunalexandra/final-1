@@ -1,0 +1,367 @@
+.third {
+  position: relative;
+  width: 921px;
+  height: 145px;
+  background-image: url(../../../../assets//images/seats/first_class.png);
+  margin: 68px auto 80px;
+}
+
+.places {
+  position: absolute;
+  top: 29px;
+  left: 134px;
+  width: 712px;
+  height: 108px;
+  background-color: #fff;
+}
+
+.place {
+  position: absolute;
+  text-align: center;
+  width: 26px;
+  height: 31px;
+  font-weight: 700;
+}
+
+.third-2,
+.third-4,
+.third-6,
+.third-8,
+.third-10,
+.third-12,
+.third-14,
+.third-16,
+.third-18,
+.third-20,
+.third-22,
+.third-24,
+.third-26,
+.third-28,
+.third-30,
+.third-32,
+.third-34,
+.third-36 {
+  top: 0;
+}
+
+.third-1,
+.third-3,
+.third-5,
+.third-7,
+.third-9,
+.third-11,
+.third-13,
+.third-15,
+.third-17,
+.third-19,
+.third-21,
+.third-23,
+.third-25,
+.third-27,
+.third-29,
+.third-31,
+.third-33,
+.third-35 {
+  top: 31px;
+  border-bottom: 4px solid #928f8f;
+}
+
+.third-2 {
+  left: 0;
+}
+
+.third-1 {
+  left: 0;
+}
+
+.third-4 {
+  left: 52px;
+}
+
+.third-3 {
+  left: 52px;
+}
+
+.third-6 {
+  left: 78px;
+}
+
+.third-5 {
+  left: 78px;
+}
+
+.third-8 {
+  left: 130px;
+}
+
+.third-7 {
+  left: 130px;
+}
+
+.third-10 {
+  left: 156px;
+}
+
+.third-9 {
+  left: 156px;
+}
+
+.third-12 {
+  left: 208px;
+}
+
+.third-11 {
+  left: 208px;
+}
+
+.third-14 {
+  left: 234px;
+}
+
+.third-13 {
+  left: 234px;
+}
+
+.third-16 {
+  left: 286px;
+}
+
+.third-15 {
+  left: 286px;
+}
+
+.third-18 {
+  left: 312px;
+}
+
+.third-17 {
+  left: 312px;
+}
+
+.third-20 {
+  left: 364px;
+}
+
+.third-19 {
+  left: 364px;
+}
+
+.third-22 {
+  left: 390px;
+}
+
+.third-21 {
+  left: 390px;
+}
+
+.third-24 {
+  left: 442px;
+}
+
+.third-23 {
+  left: 442px;
+}
+
+.third-26 {
+  left: 468px;
+}
+
+.third-25 {
+  left: 468px;
+}
+
+.third-28 {
+  left: 520px;
+}
+
+.third-27 {
+  left: 520px;
+}
+
+.third-30 {
+  left: 546px;
+}
+
+.third-29 {
+  left: 546px;
+}
+
+.third-32 {
+  left: 604px;
+}
+
+.third-31 {
+  left: 604px;
+}
+
+.third-34 {
+  right: 56px;
+}
+
+.third-33 {
+  right: 56px;
+}
+
+.third-36 {
+  right: 0;
+}
+
+.third-35 {
+  right: 0;
+}
+
+.third-3,
+.third-4,
+.third-7,
+.third-8,
+.third-11,
+.third-12,
+.third-16,
+.third-15,
+.third-20,
+.third-19,
+.third-24,
+.third-23,
+.third-28,
+.third-27,
+.third-32,
+.third-31 {
+  border-right: 4px solid #928f8f;
+}
+
+.third-37,
+.third-38,
+.third-39,
+.third-40,
+.third-41,
+.third-42,
+.third-43,
+.third-44,
+.third-45,
+.third-46,
+.third-47,
+.third-48,
+.third-49,
+.third-50,
+.third-51,
+.third-52,
+.third-53,
+.third-54 {
+  bottom: 0;
+  width: 40px;
+  height: 22px;
+}
+
+.third-38,
+.third-40,
+.third-42,
+.third-44,
+.third-46,
+.third-48,
+.third-50,
+.third-52,
+.third-54 {
+  border-left: 4px solid #928f8f;
+}
+
+.third-54 {
+  left: -4px;
+}
+
+.third-53 {
+  left: 36px;
+}
+
+.third-52 {
+  left: 76px;
+}
+
+.third-51 {
+  left: 113px;
+}
+
+.third-50 {
+  left: 152px;
+}
+
+.third-49 {
+  left: 188px;
+}
+
+.third-48 {
+  left: 228px;
+}
+
+.third-47 {
+  left: 268px;
+}
+
+.third-46 {
+  left: 308px;
+}
+
+.third-45 {
+  left: 348px;
+}
+
+.third-44 {
+  left: 388px;
+}
+
+.third-43 {
+  left: 424px;
+}
+
+.third-42 {
+  left: 464px;
+}
+
+.third-41 {
+  left: 502px;
+}
+
+.third-40 {
+  width: 44px;
+  left: 542px;
+}
+
+.third-39 {
+  width: 44px;
+  left: 580px;
+}
+
+.third-38 {
+  width: 44px;
+  right: 44px;
+}
+
+.third-37 {
+  width: 44px;
+  right: 0;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 30px;
+  height: 24px;
+  background-color: #393737;
+  font-weight: 700;
+  color: #fff;
+}
+
+.info {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  padding: 10px;
+  width: 200px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #292929;
+  background-color: #f3f3f3;
+}

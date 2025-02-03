@@ -2,10 +2,10 @@ import { useState } from 'react';
 import classes from "./starRating.module.css" ;
 
 export const StarRating = ({ totalStars = 5 }) => {
-  const [rating, setRating] = useState(0); // Состояние для хранения текущего рейтинга
+  const [rating, setRating] = useState(0);
 
   const handleClick = (index: number) => {
-    setRating(index + 1); // Обновляем рейтинг при клике на звезду
+    setRating(index + 1);
   };
 
   return (

@@ -18,10 +18,8 @@ const dispatch = useAppDispatch();
 const handleSubmit = async () => {
     const resultAction = await dispatch(sendOrder(order));
     if (sendOrder.fulfilled.match(resultAction)) {
-        // Если отправка успешна, переходим на страницу завершения
         navigate(`/completion`);
     } else {
-        // Здесь можно обработать ошибку, если нужно
         console.error('Ошибка при отправке заказа:', resultAction.error);
     }
 };

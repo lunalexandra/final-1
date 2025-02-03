@@ -2,9 +2,9 @@ import React, { useRef } from "react";
 
 interface TooltipProps {
   content?: React.ReactNode;
-  children?: React.ReactNode; // Элемент, над которым отображается тултип
+  children?: React.ReactNode;
   visible?: boolean;
-  className?: string; // Управление видимостью тултипа извне
+  className?: string;
 }
 
 const Tooltip: React.FC<TooltipProps> = ({

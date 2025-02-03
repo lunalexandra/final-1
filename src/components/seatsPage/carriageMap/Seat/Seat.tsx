@@ -17,7 +17,7 @@ interface SeatProps {
   carType: "first" | "second" | "third" | "fourth";
   isAdult: boolean;
   coach_id: string;
-  directionType: "туда" | "обратно"; // Направление
+  directionType: "туда" | "обратно";
   price: Price;
   onClick: () => void;
 }
@@ -41,7 +41,6 @@ export const Seat: React.FC<SeatProps> = ({
     "обратно": "back",
   } as const;
 
-  // Определение цены для места в зависимости от типа и положения
   const seatPrice =
   carType === "first" || carType === "fourth"
     ? price.standard ?? (console.error("Цена для люкса или 4 класса не задана"), 0)

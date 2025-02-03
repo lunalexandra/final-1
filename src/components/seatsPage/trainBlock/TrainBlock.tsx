@@ -16,7 +16,7 @@ interface TrainBlockProps {
 export const TrainBlock: React.FC<TrainBlockProps> = ({ direction, type }) => {
   const { fromCity, toCity } = useAppSelector(
     (state: RootState) => state.cities
-  ); //убрать
+  );
 
   return (
     <>

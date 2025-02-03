@@ -48,12 +48,12 @@ export const Calendar: React.FC<CalendarProps> = ({ id, classname, type, classna
       const formattedDate = `${year}-${month}-${day}`;
   
       if (type === "date_start") {
-        dispatch(setDateFrom(formattedDate)); // Сохраняем дату отправления
-        setStartDate(date); // Устанавливаем начальную дату
+        dispatch(setDateFrom(formattedDate));
+        setStartDate(date);
         //console.log(`сохраняем в стейт дату start`);
       } else {
-        dispatch(setDateTo(formattedDate)); // Сохраняем дату прибытия
-        setEndDate(date); // Устанавливаем конечную дату
+        dispatch(setDateTo(formattedDate));
+        setEndDate(date);
         //console.log(`сохраняем в стейт дату end`);
       }
     } else {

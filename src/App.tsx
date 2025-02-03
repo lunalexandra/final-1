@@ -15,9 +15,6 @@ export default function App() {
         <Route path="/order" element={<ConfirmationPage />} />
         <Route path="/completion" element={<ThankYouPage />} />
         {/*
-        
-        <Route path="/timeattack" element={<TimeAttackPage />} />
-        <Route path="/forza" element={<ForzaPage />} />
         <Route path="*" element={<NotFound />} /> */}
       </Route>
     ),

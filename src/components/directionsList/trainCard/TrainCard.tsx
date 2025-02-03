@@ -19,7 +19,6 @@ interface SeatsInfo {
   [key: string]: number | null;
 }
 
-// Интерфейс для информации о ценах
 interface PriceInfo {
   [key: string]: {
     bottom_price: number;

@@ -7,8 +7,8 @@ interface DirectionsState {
   directions: TrainInfo[]; // Массив направлений поездов
   options?: SearchOptions;
   total_count: number; // Общее количество направлений
-  loading: boolean; // Состояние загрузки
-  error: string | null; // Ошибка, если она возникла
+  loading: boolean;
+  error: string | null;
 }
 
 const initialState: DirectionsState = {

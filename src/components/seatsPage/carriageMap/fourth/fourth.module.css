@@ -1,0 +1,234 @@
+.fourth {
+  position: relative;
+  width: 921px;
+  height: 145px;
+  background-image: url(../../../../assets//images/seats/first_class.png);
+  margin: 68px auto 80px;
+}
+
+.places {
+  position: absolute;
+  top: 29px;
+  left: 134px;
+  width: 712px;
+  height: 108px;
+  background-color: #fff;
+}
+
+.place {
+  position: absolute;
+  text-align: center;
+  width: 31px;
+  height: 18px;
+  font-weight: 700;
+}
+
+.fourth-2,
+.fourth-4,
+.fourth-6,
+.fourth-8,
+.fourth-10,
+.fourth-12,
+.fourth-14,
+.fourth-16,
+.fourth-18,
+.fourth-20,
+.fourth-22,
+.fourth-24,
+.fourth-26,
+.fourth-28,
+.fourth-30,
+.fourth-32 {
+  top: 4px;
+}
+
+.fourth-1,
+.fourth-3,
+.fourth-5,
+.fourth-7,
+.fourth-9,
+.fourth-11,
+.fourth-13,
+.fourth-15,
+.fourth-17,
+.fourth-19,
+.fourth-21,
+.fourth-23,
+.fourth-25,
+.fourth-27,
+.fourth-29,
+.fourth-31 {
+  top: 26px;
+}
+
+.fourth-33,
+.fourth-35,
+.fourth-37,
+.fourth-39,
+.fourth-41,
+.fourth-43,
+.fourth-45,
+.fourth-47,
+.fourth-49,
+.fourth-51,
+.fourth-53,
+.fourth-55,
+.fourth-57,
+.fourth-59,
+.fourth-61,
+.fourth-62 {
+  bottom: 4px;
+}
+
+.fourth-34,
+.fourth-36,
+.fourth-38,
+.fourth-40,
+.fourth-42,
+.fourth-44,
+.fourth-46,
+.fourth-48,
+.fourth-50,
+.fourth-52,
+.fourth-54,
+.fourth-56,
+.fourth-58,
+.fourth-60 {
+  bottom: 26px;
+}
+
+.fourth-2,
+.fourth-1,
+.fourth-33 {
+  left: 2px;
+}
+
+.fourth-4,
+.fourth-3,
+.fourth-34,
+.fourth-35 {
+  left: 40px;
+}
+
+.fourth-5,
+.fourth-6,
+.fourth-36,
+.fourth-37 {
+  left: 84px;
+}
+
+.fourth-8,
+.fourth-7,
+.fourth-38,
+.fourth-39 {
+  left: 127px;
+}
+
+.fourth-10,
+.fourth-9,
+.fourth-40,
+.fourth-41 {
+  left: 172px;
+}
+
+.fourth-12,
+.fourth-11,
+.fourth-42,
+.fourth-43 {
+  left: 215px;
+}
+
+.fourth-14,
+.fourth-13,
+.fourth-44,
+.fourth-45 {
+  left: 260px;
+}
+
+.fourth-16,
+.fourth-15,
+.fourth-46,
+.fourth-47 {
+  left: 305px;
+}
+
+.fourth-18,
+.fourth-17,
+.fourth-48,
+.fourth-49 {
+  left: 350px;
+}
+
+.fourth-20,
+.fourth-19,
+.fourth-50,
+.fourth-51 {
+  left: 395px;
+}
+
+.fourth-22,
+.fourth-21,
+.fourth-52,
+.fourth-53 {
+  left: 440px;
+}
+
+.fourth-24,
+.fourth-23,
+.fourth-54,
+.fourth-55 {
+  left: 485px;
+}
+
+.fourth-26,
+.fourth-25,
+.fourth-56,
+.fourth-57 {
+  left: 530px;
+}
+
+.fourth-28,
+.fourth-27,
+.fourth-58,
+.fourth-59 {
+  left: 575px;
+}
+
+.fourth-30,
+.fourth-29,
+.fourth-60,
+.fourth-61 {
+  left: 620px;
+}
+
+.fourth-32,
+.fourth-31,
+.fourth-62 {
+  left: 665px;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 30px;
+    height: 24px;
+    background-color: #393737;
+    font-weight: 700;
+    color: #fff;
+  }
+
+.info {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  padding: 10px;
+  width: 200px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #292929;
+  background-color: #f3f3f3;
+}

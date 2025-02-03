@@ -33,12 +33,13 @@ export const PaymentForm = () => {
     e.preventDefault();
     const formErrors = validateUserForm(userInfo);
     setErrors(formErrors);
+    console.log(formErrors)
 
     if (Object.values(formErrors).every((error) => error === null)) {
       console.log("Форма прошла валидацию. Данные отправлены!");
-    }
-    dispatch(addUserInfo(userInfo));
+      dispatch(addUserInfo(userInfo));
     navigate('/order');
+    }
   };
 
   const handlePaymentMethodChange = (method: "cash" | "online") => {
@@ -63,6 +64,22 @@ export const PaymentForm = () => {
         </div>
 
         <div className={classes["complete-name"]}>
+
+        <div className={classes["input-container"]}>
+            <label htmlFor="last_name" className={classes.label}>
+              Фамилия
+            </label>
+            <input
+              id="last_name"
+              type="text"
+              name="last_name"
+              onChange={handleChange}
+              value={userInfo.last_name}
+              required
+            />
+            {errors.last_name && <p className={classes.error}>{errors.last_name}</p>}
+          </div>
+
           <div className={classes["input-container"]}>
             <label htmlFor="first_name" className={classes.label}>
               Имя
@@ -76,21 +93,6 @@ export const PaymentForm = () => {
               required
             />
             {errors.first_name && <p className={classes.error}>{errors.first_name}</p>}
-          </div>
-
-          <div className={classes["input-container"]}>
-            <label htmlFor="last_name" className={classes.label}>
-              Фамилия
-            </label>
-            <input
-              id="last_name"
-              type="text"
-              name="last_name"
-              onChange={handleChange}
-              value={userInfo.last_name}
-              required
-            />
-            {errors.last_name && <p className={classes.error}>{errors.last_name}</p>}
           </div>
 
           <div className={classes["input-container"]}>

@@ -19,7 +19,7 @@
   }
   
   .toggle-switch input:checked + .toggle-switch__slider {
-    background-color: #FCDC9D; /* Цвет для включенного состояния */
+    background-color: #FCDC9D;
   }
 
   .toggle-switch .toggle-switch__slider {
@@ -31,7 +31,7 @@
     bottom: 0;
     background-color:#FFFFFF;
     transition: 0.4s;
-    border-radius: 10px; /* Круглая форма */
+    border-radius: 10px;
   }
   
   .toggle-switch .toggle-switch__slider:before {
@@ -40,8 +40,8 @@
     height: 28px;
     width: 28px;
     border-radius: 50%; /* Круглая кнопка */
-    left: 0; /* Отступ слева */
-    top: -4px; /* Отступ снизу */
+    left: 0;
+    top: -4px;
     background-color: #C4C4C4;
     transition: 0.4s;
   }

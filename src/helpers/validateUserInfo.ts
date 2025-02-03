@@ -38,6 +38,6 @@ export const validateUserForm = (UserInfo: UserInfo) => {
   errors.first_name = validateName(UserInfo.first_name);
   errors.last_name = validateName(UserInfo.last_name);
   errors.email = validateEmail(UserInfo.email);
-  errors.phone_number = validatePhoneNumber(UserInfo.phone); // добавили валидацию телефона
+  errors.phone = validatePhoneNumber(UserInfo.phone);
   return errors;
 };
