@@ -29,7 +29,7 @@ export const TrainPage = () => {
         }
       />
       <StepsBar currentStep={1} />
-      <div className="main-container">
+      <div className="main-container" >
           <DirectionsList/>
       </div>
       <Footer />

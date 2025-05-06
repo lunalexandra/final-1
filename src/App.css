@@ -10,11 +10,12 @@ html {
 }
 
 .main-container {
+  min-width: 1400px;
   position: relative;
   display: flex;
   width: 100%;
   min-height: 874px;
-  padding: 100px 13% 193px;
+  padding: 100px 2% 193px;
 }
 
 aside {

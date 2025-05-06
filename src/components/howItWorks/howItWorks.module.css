@@ -1,6 +1,6 @@
 .how-it-works {
+    min-width: 1400px;
     background-image: url("../../assets/images/how.png");
-    
 }
 
 .how-it-works__headline {
