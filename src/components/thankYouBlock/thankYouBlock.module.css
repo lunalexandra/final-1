@@ -1,6 +1,7 @@
 .container {
   position: absolute;
   top: -350px;
+  min-width: 1000px;
   width: 80%;
 }
 

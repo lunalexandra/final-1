@@ -2,6 +2,7 @@
 .main-container {
     position: relative;
     display: flex;
+    min-width: 1400px;
     width: 100%;
     min-height: 874px;
     padding: 100px 13% 193px;
